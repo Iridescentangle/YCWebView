@@ -128,13 +128,14 @@ public class X5WebViewActivity extends AppCompatActivity {
         mIvMore = findViewById(R.id.iv_more);
         mWebView = findViewById(R.id.web_view);
         mProgress = findViewById(R.id.progress);
-
-        //显示进度条
-        mProgress.show();
-        //设置进度条过度颜色
-        mProgress.setColor(Color.BLUE,Color.RED);
-        //设置单色进度条
-        mProgress.setColor(Color.BLUE);
+        if(mProgress != null) {
+            //显示进度条
+            mProgress.show();
+            //设置进度条过度颜色
+            mProgress.setColor(Color.BLUE, Color.RED);
+            //设置单色进度条
+            mProgress.setColor(Color.BLUE);
+        }
     }
 
     private void initToolBar() {
